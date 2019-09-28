@@ -7,7 +7,8 @@ ENV PORT=${PORT}
 
 COPY package.json package-lock.json ./
 
-RUN if ["$NODE_ENV" = "test"]; then npm install; else npm install --production; fi
+# RUN if ["$NODE_ENV" = "test"]; then npm install; else npm install --production; fi
+RUN npm install
 
 COPY . . 
 
