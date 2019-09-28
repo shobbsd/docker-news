@@ -6,8 +6,11 @@ node_js:
 services:
   - docker
 
+<<<<<<< HEAD
 env:
   - DOCKER_COMPOSE_VERSION=3.7
 
+=======
+>>>>>>> 49897d66888d8b19b40b0169cacb4ad11f277464
 before_install:
   - docker-compose -f docker-compose.yml -f docker-compose.test.yml up
