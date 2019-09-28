@@ -17,15 +17,12 @@ const customConfig = {
     }
   },
   test: {
-    connection: {
-      database: 'nc_news_test'
-      // password
-    }
+    connection: process.env.DATABASE_URL
   },
   production: {
     connection: process.env.DATABASE_URL
   }
 };
 
-console.log(customConfig[ENV]);
+console.log(customConfig, ENV);
 module.exports = { ...customConfig[ENV], ...baseConfig };
