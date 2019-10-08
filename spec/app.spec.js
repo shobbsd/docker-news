@@ -76,6 +76,7 @@ describe('/api', () => {
           .get(`/api/articles/${article_id}`)
           .expect(200)
           .then(({ body: { article } }) => {
+            console.log(article);
             expect(article.article_id).to.equal(article_id);
             expect(article.comment_count).to.equal(1);
             expect(article).to.contain.keys(

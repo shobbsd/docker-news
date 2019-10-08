@@ -8,7 +8,6 @@ exports.handlePsqlErrors = (err, req, res, next) => {
   const create22P02ErrorMessage = message => {
     const details = err.message.split('- ')[1];
     const detailSplit = details.split(': ');
-    console.log(detailSplit[1]);
     return `${detailSplit[1]} is an ${detailSplit[0]}${
       detailSplit[1] === '"NaN"' ? ' (votes value)' : ''
     }`;

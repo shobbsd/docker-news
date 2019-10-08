@@ -17,7 +17,7 @@ const customConfig = {
     }
   },
   test: {
-    connection: {
+    connection: process.env.DATABASE_URL || {
       database: 'nc_news_test'
       // password
     }
@@ -27,5 +27,4 @@ const customConfig = {
   }
 };
 
-console.log(customConfig[ENV]);
 module.exports = { ...customConfig[ENV], ...baseConfig };
