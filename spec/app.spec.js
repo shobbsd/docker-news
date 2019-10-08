@@ -69,7 +69,7 @@ describe('/api', () => {
   });
   describe('/articles', () => {
     xit('GET:200 ', () => {});
-    describe('/:article_id', () => {
+    describe.only('/:article_id', () => {
       it('GET:200 returns the request article', () => {
         const article_id = 2;
         return request(app)
