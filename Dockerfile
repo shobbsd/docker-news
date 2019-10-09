@@ -5,7 +5,7 @@ ENV NODE_ENV=${NODE_ENV}
 ARG PORT=9090
 ENV PORT=${PORT}
 
-COPY package.json package-lock.json ./
+COPY package*.json ./
 
 RUN npm install --production
 
