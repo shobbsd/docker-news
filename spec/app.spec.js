@@ -107,7 +107,7 @@ describe('/api', () => {
           .expect(400)
           .then(({ body: { msg } }) => {
             expect(msg).to.equal(
-              `"${article_id}" is an invalid input syntax for integer`
+              `"${article_id}" is an invalid input syntax for type integer`
             );
           });
       });
@@ -147,7 +147,7 @@ describe('/api', () => {
           .expect(400)
           .then(({ body: { msg } }) => {
             expect(msg).to.equal(
-              '"NaN" is an invalid input syntax for integer (votes value)'
+              '"NaN" is an invalid input syntax for type integer (votes value)'
             );
           });
       });
@@ -158,7 +158,7 @@ describe('/api', () => {
           .expect(400)
           .then(({ body: { msg } }) => {
             expect(msg).to.equal(
-              '"not-an-id" is an invalid input syntax for integer'
+              '"not-an-id" is an invalid input syntax for type integer'
             );
           });
       });
