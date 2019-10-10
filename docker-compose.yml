@@ -1,3 +1,10 @@
+version: 0.1.0
+name: docker-nc-news
+description: A node express docker collab extraordinaire 
+maintainers:
+ - name: Shaq Hobbs
+   email: shaq@northcoders.com
+
 version: '3.7'
 services:
   web:
